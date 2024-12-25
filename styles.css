@@ -303,10 +303,9 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 2rem;
     height: 100%;
-    padding: 4rem 2rem;
+    padding: 2rem 0;
 }
 
 .photo-story.reverse {
@@ -325,29 +324,18 @@ p {
 }
 
 .photo-card.large {
-    width: 90%;
-    max-width: 900px;
-    height: auto;
-    min-height: 400px;
-    max-height: 75vh;
+    width: 100%;
+    height: 65vh;
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0,0,0,0.03);
 }
 
 .photo-card.large img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 75vh;
-    object-fit: contain;
-    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.8s ease;
 }
 
@@ -435,24 +423,19 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 95vw;
-    height: 95vh;
+    width: 90vw;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,0.9);
-    border-radius: 20px;
-    padding: 2rem;
 }
 
 .lightbox-content img {
-    max-width: 90%;
+    max-width: 90vw;
     max-height: 80vh;
     object-fit: contain;
     border-radius: 10px;
-    background-color: rgba(255,255,255,0.05);
-    padding: 1rem;
 }
 
 .close-lightbox {
@@ -484,8 +467,7 @@ p {
     }
 
     .photo-card.large {
-        width: 95%;
-        min-height: 300px;
+        height: 50vh;
     }
 
     .story-text {
@@ -503,8 +485,7 @@ p {
     }
 
     .photo-card.large {
-        width: 100%;
-        min-height: 250px;
+        height: 40vh;
     }
 
     .photo-caption {
@@ -528,10 +509,6 @@ p {
     h2 {
         font-size: 2rem;
     }
-
-    .photo-story {
-        padding: 2rem 1rem;
-    }
 }
 
 /* Fix for fullPage.js */
@@ -548,43 +525,4 @@ p {
     color: var(--primary-color);
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-}
-
-/* Portrait-specific styles */
-.photo-story:has(img[alt*="Portret"]) {
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.photo-story:has(img[alt*="Portret"]) h2 {
-    margin: 2rem 0;
-}
-
-.photo-story:has(img[alt*="Portret"]) .photo-card.large {
-    max-width: 100%;
-    width: 100%;
-    height: calc(100vh - 250px); /* Adjust height to leave space for text */
-    min-height: unset;
-    margin: 0;
-    border-radius: 0;
-    background-color: var(--background);
-}
-
-.photo-story:has(img[alt*="Portret"]) .photo-card.large img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 0;
-    max-height: none;
-}
-
-.photo-story:has(img[alt*="Portret"]) .story-text {
-    padding: 2rem;
-    margin-top: auto;
-    background-color: var(--background);
-    width: 100%;
-    max-width: 100%;
 } 
