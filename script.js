@@ -1,6 +1,6 @@
 // Initialize fullPage.js
 new fullpage('#fullpage', {
-    licenseKey: null,
+    licenseKey: 'gplv3-license',
     autoScrolling: true,
     scrollHorizontally: false,
     navigation: true,
